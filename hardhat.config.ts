@@ -30,10 +30,18 @@ const config: HardhatUserConfig = {
 		goerli: {
 			url: process.env.GOERLI_URL || '',
 			accounts: getPrivateKey(),
+			companionNetworks: {
+				l1: 'goerli',
+				l2: 'mumbai',
+			},
 		},
 		mumbai: {
 			url: process.env.MUMBAI_URL || '',
 			accounts: getPrivateKey(),
+			companionNetworks: {
+				l1: 'goerli',
+				l2: 'mumbai',
+			},
 		},
 	},
 	gasReporter: {
