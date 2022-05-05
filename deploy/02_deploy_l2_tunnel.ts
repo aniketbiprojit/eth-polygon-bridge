@@ -14,26 +14,26 @@ const func: DeployFunction = async (hre) => {
 		args: [FxChildAddress],
 	})
 
-	await execute(
-		'L2Tunnel',
-		{ from: deployer },
-		'setFxRootTunnel',
-		(
-			await hre.companionNetworks['l1'].deployments.get('L1Tunnel')
-		).address
-	)
+	// await execute(
+	// 	'L2Tunnel',
+	// 	{ from: deployer },
+	// 	'setFxRootTunnel',
+	// 	(
+	// 		await hre.companionNetworks['l1'].deployments.get('L1Tunnel')
+	// 	).address
+	// )
 
-	await hre.companionNetworks['l1'].deployments.execute(
-		'L1Tunnel',
-		{
-			from: deployer,
-		},
-		'setFxChildTunnel',
-		(
-			await deployments.get('L2Tunnel')
-		).address
-	)
-	return
+	// await hre.companionNetworks['l1'].deployments.execute(
+	// 	'L1Tunnel',
+	// 	{
+	// 		from: deployer,
+	// 	},
+	// 	'setFxChildTunnel',
+	// 	(
+	// 		await deployments.get('L2Tunnel')
+	// 	).address
+	// )
+	// return
 	await execute(
 		'L2Tunnel',
 		{ from: deployer, log: true },
