@@ -27,6 +27,12 @@ function getPrivateKey(): string[] {
 const config: HardhatUserConfig = {
 	solidity: '0.8.4',
 	networks: {
+		hardhat: {
+			companionNetworks: {
+				l1: 'hardhat',
+				l2: 'hardhat',
+			},
+		},
 		goerli: {
 			url: process.env.GOERLI_URL || '',
 			accounts: getPrivateKey(),

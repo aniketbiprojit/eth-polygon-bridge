@@ -1,7 +1,7 @@
 lockfileVersion: 5.4
 
 specifiers:
-  '@nomiclabs/hardhat-ethers': ^2.0.0
+  '@nomiclabs/hardhat-ethers': npm:hardhat-deploy-ethers@0.3.0-beta.13
   '@nomiclabs/hardhat-etherscan': ^3.0.0
   '@nomiclabs/hardhat-waffle': ^2.0.0
   '@typechain/ethers-v5': ^7.0.1
@@ -21,7 +21,7 @@ specifiers:
   eslint-plugin-prettier: ^3.4.0
   eslint-plugin-promise: ^5.1.0
   ethereum-waffle: ^3.0.0
-  ethers: ^5.0.0
+  ethers: ^5.6.5
   fx-portal: ^1.0.3
   hardhat: ^2.9.3
   hardhat-deploy: ^0.11.4
@@ -35,9 +35,8 @@ specifiers:
   typescript: ^4.5.2
 
 dependencies:
-  '@nomiclabs/hardhat-ethers': 2.0.5_ethers@5.6.5+hardhat@2.9.3
   '@nomiclabs/hardhat-etherscan': 3.0.3_hardhat@2.9.3
-  '@nomiclabs/hardhat-waffle': 2.0.3_ialzm4xalh2kvx5dbnjvwfyk3a
+  '@nomiclabs/hardhat-waffle': 2.0.3_o7kyv72dxtopuoygudc6xk5tjy
   '@typechain/ethers-v5': 7.2.0_e674wvycsr2lyypt7eogaxoyjq
   '@typechain/hardhat': 2.3.1_arebner7dfz333jqouc33z2vh4
   '@types/chai': 4.3.1
@@ -55,7 +54,6 @@ dependencies:
   eslint-plugin-prettier: 3.4.1_evcial7aw3q6fcauxv2c7fxuoe
   eslint-plugin-promise: 5.2.0_eslint@7.32.0
   ethereum-waffle: 3.4.4_typescript@4.6.4
-  ethers: 5.6.5
   fx-portal: 1.0.3
   hardhat: 2.9.3
   hardhat-gas-reporter: 1.0.8_hardhat@2.9.3
@@ -68,6 +66,8 @@ dependencies:
   typescript: 4.6.4
 
 devDependencies:
+  '@nomiclabs/hardhat-ethers': /hardhat-deploy-ethers/0.3.0-beta.13_ethers@5.6.5+hardhat@2.9.3
+  ethers: 5.6.5
   hardhat-deploy: 0.11.4_hardhat@2.9.3
 
 packages:
@@ -558,7 +558,6 @@ packages:
       '@ethersproject/bignumber': 5.6.0
       '@ethersproject/constants': 5.6.0
       '@ethersproject/logger': 5.6.0
-    dev: false
 
   /@ethersproject/wallet/5.6.0:
     resolution: {integrity: sha512-qMlSdOSTyp0MBeE+r7SUhr1jjDlC1zAXB8VD84hCnpijPQiSNbxr6GdiLXxpUs8UKzkDiNYYC5DRI3MZr+n+tg==}
@@ -652,16 +651,6 @@ packages:
       fastq: 1.13.0
     dev: false
 
-  /@nomiclabs/hardhat-ethers/2.0.5_ethers@5.6.5+hardhat@2.9.3:
-    resolution: {integrity: sha512-A2gZAGB6kUvLx+kzM92HKuUF33F1FSe90L0TmkXkT2Hh0OKRpvWZURUSU2nghD2yC4DzfEZ3DftfeHGvZ2JTUw==}
-    peerDependencies:
-      ethers: ^5.0.0
-      hardhat: ^2.0.0
-    dependencies:
-      ethers: 5.6.5
-      hardhat: 2.9.3
-    dev: false
-
   /@nomiclabs/hardhat-etherscan/3.0.3_hardhat@2.9.3:
     resolution: {integrity: sha512-OfNtUKc/ZwzivmZnnpwWREfaYncXteKHskn3yDnz+fPBZ6wfM4GR+d5RwjREzYFWE+o5iR9ruXhWw/8fejWM9g==}
     peerDependencies:
@@ -679,7 +668,7 @@ packages:
       - supports-color
     dev: false
 
-  /@nomiclabs/hardhat-waffle/2.0.3_ialzm4xalh2kvx5dbnjvwfyk3a:
+  /@nomiclabs/hardhat-waffle/2.0.3_o7kyv72dxtopuoygudc6xk5tjy:
     resolution: {integrity: sha512-049PHSnI1CZq6+XTbrMbMv5NaL7cednTfPenx02k3cEh8wBMLa6ys++dBETJa6JjfwgA9nBhhHQ173LJv6k2Pg==}
     peerDependencies:
       '@nomiclabs/hardhat-ethers': ^2.0.0
@@ -687,7 +676,7 @@ packages:
       ethers: ^5.0.0
       hardhat: ^2.0.0
     dependencies:
-      '@nomiclabs/hardhat-ethers': 2.0.5_ethers@5.6.5+hardhat@2.9.3
+      '@nomiclabs/hardhat-ethers': /hardhat-deploy-ethers/0.3.0-beta.13_ethers@5.6.5+hardhat@2.9.3
       '@types/sinon-chai': 3.2.8
       '@types/web3': 1.0.19
       ethereum-waffle: 3.4.4_typescript@4.6.4
@@ -4108,7 +4097,6 @@ packages:
     transitivePeerDependencies:
       - bufferutil
       - utf-8-validate
-    dev: false
 
   /ethjs-unit/0.1.6:
     resolution: {integrity: sha1-xmWSHkduh7ziqdWIpv4EBbLEFpk=}
@@ -4919,6 +4907,16 @@ packages:
       ajv: 6.12.6
       har-schema: 2.0.0
     dev: false
+
+  /hardhat-deploy-ethers/0.3.0-beta.13_ethers@5.6.5+hardhat@2.9.3:
+    resolution: {integrity: sha512-PdWVcKB9coqWV1L7JTpfXRCI91Cgwsm7KLmBcwZ8f0COSm1xtABHZTyz3fvF6p42cTnz1VM0QnfDvMFlIRkSNw==}
+    peerDependencies:
+      ethers: ^5.0.0
+      hardhat: ^2.0.0
+    dependencies:
+      ethers: 5.6.5
+      hardhat: 2.9.3
+    dev: true
 
   /hardhat-deploy/0.11.4_hardhat@2.9.3:
     resolution: {integrity: sha512-BNMwWqaxrwb8XKrYzmCwnUzOSKzicUBk+fwd28doUNoAGFFh8kpoypkcHMzKDVdLhnamAardcfqJet73zrZoTA==}
