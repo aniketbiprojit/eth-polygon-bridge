@@ -42,7 +42,6 @@ const func: DeployFunction = async (hre) => {
 			'setFxChildTunnel',
 			L2TunnelAddress
 		)
-	// return
 }
 
 export default func
